@@ -131,7 +131,7 @@ func (g *gomono) makeRequest(method, url string, body io.Reader, headers []heade
 		return err
 	}
 
-	if resp.StatusCode == 200 {
+	if resp.StatusCode == 200 || resp.StatusCode == 201 {
 		err = json.Unmarshal(b, responseTarget)
 		if err != nil {
 			return err
