@@ -43,7 +43,7 @@ func (g *gomono) Information(id string) (*InformationResponse, error) {
 	}
 
 	var respTarget InformationResponse
-	err := g.makeRequest("POST", fmt.Sprintf("%v/accounts/%v", g.apiUrl, id), nil, nil, &respTarget)
+	err := g.makeRequest("GET", fmt.Sprintf("%v/accounts/%v", g.apiUrl, id), nil, nil, &respTarget)
 	if err != nil {
 		return nil, err
 	}
