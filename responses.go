@@ -62,6 +62,7 @@ type (
 			Narration string  `json:"narration"`
 			Type      string  `json:"type"`
 			Category  string  `json:"category"`
+			Balance   float64 `json:"balance"`
 		}
 	}
 
