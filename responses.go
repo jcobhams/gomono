@@ -6,7 +6,9 @@ package gomono
 
 type (
 	InformationResponse struct {
-		Meta    struct{ DataStatus string } `json:"meta"`
+		Meta struct {
+			DataStatus string `json:"data_status"`
+		} `json:"meta"`
 		Account struct {
 			ID            string  `json:"_id"`
 			Name          string  `json:"name"`
@@ -60,6 +62,7 @@ type (
 			Narration string  `json:"narration"`
 			Type      string  `json:"type"`
 			Category  string  `json:"category"`
+			Balance   float64 `json:"balance"`
 		}
 	}
 
